@@ -21,10 +21,10 @@ def save_todo(todo):
 
 def pause_and_clear():
 	input("Tekan Enter untuk melanjutkan...")
-	os.system('cls' if os.name == 'nt' else 'clear')
+	os.system('cls')
 
 def show_todo(todo, filter_by=None):
-	os.system('cls' if os.name == 'nt' else 'clear')
+	os.system('cls')
 	print("="*50)
 	print("\n\t Kelompok 3 To Do List\t\n")
 	print("="*50)
@@ -40,7 +40,7 @@ def show_todo(todo, filter_by=None):
 	pause_and_clear()
 
 def add_todo(todo):
-	os.system('cls' if os.name == 'nt' else 'clear')
+	os.system('cls')
 	task = input("Masukkan to-do baru: ").strip()
 	if task:
 		todo.append({'task': task, 'status': 'pending'})
@@ -49,7 +49,7 @@ def add_todo(todo):
 	pause_and_clear()
 
 def edit_todo(todo):
-	os.system('cls' if os.name == 'nt' else 'clear')
+	os.system('cls')
 	show_todo(todo)
 	i_input = input("Pilih nomor to-do yang ingin diedit: ").strip()
 	if not i_input.isdigit():
@@ -84,7 +84,7 @@ def delete_todo(todo):
 	pause_and_clear()
 		
 def mark_done(todo):
-	os.system('cls' if os.name == 'nt' else 'clear')
+	os.system('cls')
 	show_todo(todo, filter_by='pending')
 	i_input = input("Pilih nomor to-do yang ingin ditandai selesai: ").strip()
 	if not i_input.isdigit():
